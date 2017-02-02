@@ -242,7 +242,8 @@ $(document).ready(function () {
        * Check if $elements exist.
        * @param {jQuery|Array} $elements
        * @returns {boolean}
-       */
+       **/
+
       function hasElement ($elements) {
         $elements = Array.isArray($elements) ? $elements : [$elements];
         return $elements.every(function ($element) {
@@ -252,9 +253,9 @@ $(document).ready(function () {
     },
 
     menu: function (integrator) {
-      $('.menu-item').velocity('transition.slideDownIn', {
+      $('.menu-item').velocity('transition.fadeIn', {
         display: null,
-        duration: 200,
+        duration: 100,
         complete: function () {
           integrator.next();
         }
@@ -276,7 +277,7 @@ $(document).ready(function () {
           integrator.next();
         };
 
-        $post.velocity('transition.slideDownIn', postMotionOptions);
+        $post.velocity('transition.fadeIn', postMotionOptions);
       }
     },
 
